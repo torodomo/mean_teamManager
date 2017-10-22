@@ -1,0 +1,18 @@
+<h1>App Player</h1>
+<section>
+  <div class="create">
+    <form (submit)="create()" #formData="ngForm">
+      <p>Player Name:
+        <input type="text" name="name"
+        required
+        minlength="2"
+        [(ngModel)]="player.name">
+      </p>
+      <p>Preferred Position:
+        <input type="text" name="position"
+        [(ngModel)]="player.position">
+      </p> 
+      <input type='submit' value="Add" [disabled]="!formData.valid">
+    </form>
+  </div>
+</section>
